@@ -1,0 +1,9 @@
+*.log
+secrets.yaml
+*.db
+google_calendars.yaml
+.cloud/
+.google.token
+configuration.yaml.save
+
+

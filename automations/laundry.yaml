@@ -1,0 +1,28 @@
+- alias: Laundry light on, cancel timer
+  trigger:
+    platform: state
+    entity_id: binary_sensor.laundry_motion_sensor
+    to: 'on'
+  action:
+    - service: timer.cancel
+      entity_id: timer.laundry_light
+    - service: light.turn_on
+      entity_id: light.laundry
+- alias: Laundry light, start timer
+  trigger:
+    platform: state
+    entity_id: binary_sensor.laundry_motion_sensor
+    to: 'off'
+  action:
+    service: timer.start
+    entity_id: timer.laundry_light
+- alias: Bathroom light off
+  trigger:
+    platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.laundry_light
+  action:
+    service: light.turn_off
+    entity_id: light.laundry
+

@@ -1,0 +1,28 @@
+- alias: Open Garage
+  trigger:
+    platform: state
+    entity_id: cover.garage_door_opener
+    to: 'open'
+    for:
+      minutes: 10
+  action:
+    - service: notify.mobile_app_johns_iphone
+      data:
+        message: "The Garage Door Has Been Open For 10 Minutes!"
+        data:
+          push:
+            category: "garage"
+
+- alias: iOS Actionable Notification to open Garage
+  trigger:
+  - platform: event
+    event_type: ios.notification_action_fired
+    event_data:
+      actionName: CLOSE_GARAGE
+  condition:
+  - condition: numeric_state
+    entity_id: sensor.ha_runtime_in_minutes
+    above: 1
+  action:
+  - service: cover.close_cover
+    entity_id: cover.garage_door_opener

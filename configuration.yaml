@@ -1,0 +1,108 @@
+lovelace:
+
+default_config:
+
+frontend:
+  themes: !include_dir_merge_named themes
+
+apple_tv:
+  - host: 10.1.10.170
+    login_id: 00000000-190a-1d91-b265-ef50cc1440d0
+#    credentials: C1425411C5E9ED9F:7F392EA4F58DE0FF75ADE99F158E44B8B957AC42263EE$
+    name: Bedroom Apple TV
+    start_off: true
+  - host: 10.1.10.171
+    login_id: 3A809AFE-07F4-461A-8543-5F129072CC43
+    credentials: FADE2B1EF7C1AD60:A46A8CAF098471485E240E033694C8FCE7E82AD17B03933F8F0B794FA4C33BD3
+    name: LivingRoom Apple TV
+    start_off: true
+
+cast:
+  media_player:
+  - host: 10.1.10.120
+  - host: 10.1.10.121
+  - host: 10.1.10.122
+  - host: 10.1.10.123
+  - host: 10.1.10.124
+  - host: 10.1.10.125
+
+google:
+  client_id: !secret google_client_id
+  client_secret: !secret google_client_secret
+
+input_boolean:
+  all_lights_on:
+    name: Turn all lights on
+    icon: hass:lightbulb
+  all_lights_off:
+    name: Turn all lights off
+    icon: hass:lightbulb
+  theater_mode:
+    name: Theater Mode
+
+ios:
+  push:
+    categories:
+      - name: Alarm
+        identifier: 'garage'
+        actions:
+          - identifier: 'CLOSE_GARAGE'
+            title: 'Close Garage'
+            activationMode: 'background'
+            authenticationRequired: true
+            destructive: true
+            behavior: 'default'
+
+remote:
+  - platform: harmony
+    name: LivingRoom-Harmony
+    host: 10.1.10.201
+  - platform: harmony
+    name: MasterBedroom-Harmony
+    host: 10.1.10.202
+
+smartthinq:
+  token: !secret smartthinq_token
+  region: US
+  language: en-US
+
+spotify:
+  client_id: !secret spotify_client_id
+  client_secret: !secret spotify_client_secret
+
+sonos:
+  media_player:
+    hosts:
+       - 10.1.10.142
+       - 10.1.10.143
+       - 10.1.10.144
+
+switch:
+  - platform: wake_on_lan
+    mac: "18:C0:4D:28:FE:1A"
+    name: "Wakeup Battlestation"
+    
+timer:
+  laundry_light:
+    duration: '00:04:00'
+
+tplink:
+  switch:
+    - host: 10.1.10.150
+    - host: 10.1.10.151
+    - host: 10.1.10.152
+
+tts:
+  - platform: google_translate
+
+weather:
+  - platform: openweathermap
+    api_key: !secret openweathermap_api_key
+
+
+
+group: !include groups.yaml
+automation: !include automations.yaml
+automation old: !include_dir_merge_list automations
+script: !include scripts.yaml
+scene: !include scenes.yaml

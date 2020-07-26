@@ -1,0 +1,24 @@
+{
+    "data": {
+        "items": [
+            {
+                "id": "lovelace_moble",
+                "mode": "storage",
+                "require_admin": false,
+                "show_in_sidebar": true,
+                "title": "Moble",
+                "url_path": "lovelace-moble"
+            },
+            {
+                "id": "lovelace_tablets",
+                "mode": "storage",
+                "require_admin": false,
+                "show_in_sidebar": true,
+                "title": "Tablets",
+                "url_path": "lovelace-tablets"
+            }
+        ]
+    },
+    "key": "lovelace_dashboards",
+    "version": 1
+}

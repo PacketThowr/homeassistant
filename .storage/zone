@@ -1,0 +1,26 @@
+{
+    "data": {
+        "items": [
+            {
+                "icon": "mdi:map-marker",
+                "id": "work_usm",
+                "latitude": 33.593588769249244,
+                "longitude": -102.02969402074815,
+                "name": "Work - USM",
+                "passive": false,
+                "radius": 262.3045869397693
+            },
+            {
+                "icon": "mdi:map-marker",
+                "id": "work_ent",
+                "latitude": 33.57527950558772,
+                "longitude": -101.89690589904787,
+                "name": "Work - ENT",
+                "passive": false,
+                "radius": 171.1502592941429
+            }
+        ]
+    },
+    "key": "zone",
+    "version": 1
+}

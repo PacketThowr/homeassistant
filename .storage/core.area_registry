@@ -1,0 +1,64 @@
+{
+    "data": {
+        "areas": [
+            {
+                "id": "f61d9b8031e840619efe8cda9744368d",
+                "name": "Living Room"
+            },
+            {
+                "id": "e2f5950a39b94a49ac68035c3b68f2e4",
+                "name": "Kitchen"
+            },
+            {
+                "id": "24b44f3678fa460c95cac7ff025aef58",
+                "name": "Master Bedroom"
+            },
+            {
+                "id": "f2e690f4bbb94e7581858031e49f405b",
+                "name": "Office"
+            },
+            {
+                "id": "0d0c15faa2084af79f3d152595726b4a",
+                "name": "Hallway"
+            },
+            {
+                "id": "78b5fde6d11f42fe9d8aa9034fced183",
+                "name": "Guest Bedroom"
+            },
+            {
+                "id": "460e41afa65c4690be8ab34042a145ce",
+                "name": "Guest Bathroom"
+            },
+            {
+                "id": "081f89f87ed74d18973ba55ed54d26a4",
+                "name": "Master Bathroom"
+            },
+            {
+                "id": "32b80bd0199f4182a42d54780917432c",
+                "name": "Dining Room"
+            },
+            {
+                "id": "e94492449fae4093b549eeef4a31d115",
+                "name": "Laundry Room"
+            },
+            {
+                "id": "36589dabc4a14289a5c4dbfba5f2cde7",
+                "name": "Master Closet"
+            },
+            {
+                "id": "e2f1cd2862b04b979bacdd9e244ffb00",
+                "name": "Entry Way"
+            },
+            {
+                "id": "0172d491c4624aa5a96786e733deea71",
+                "name": "Front yard"
+            },
+            {
+                "id": "a9fc24b1958141a996d3e0b8670ee34b",
+                "name": "Garage"
+            }
+        ]
+    },
+    "key": "core.area_registry",
+    "version": 1
+}

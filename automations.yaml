@@ -1,0 +1,14 @@
+- id: '1594353706512'
+  alias: Turn On Theater Mode
+  description: ''
+  trigger:
+  - entity_id: input_boolean.theater_mode
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - scene: scene.theater_mode
+  - delay: 00:00:10
+  - data: {}
+    entity_id: input_boolean.theater_mode
+    service: input_boolean.turn_off

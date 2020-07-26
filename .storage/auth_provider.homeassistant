@@ -1,0 +1,16 @@
+{
+    "data": {
+        "users": [
+            {
+                "password": "JDJiJDEyJFFFN1UzUmtGS3VjV2p3b3JuUzFnT3V4d3R4QlR2cXZ6RlpDSFFULmo0b3FVQ0l2NzZ2WG1l",
+                "username": "jgudgeon"
+            },
+            {
+                "password": "JDJiJDEyJFJOcGRkeDV3MHAvRC5iQ1YzUW54NnVzUkVZdXhJRlZKWk16a1hwZkFSUWx5R05BUy92R3JT",
+                "username": "abriseno"
+            }
+        ]
+    },
+    "key": "auth_provider.homeassistant",
+    "version": 1
+}
