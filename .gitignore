@@ -5,5 +5,5 @@ google_calendars.yaml
 .cloud/
 .google.token
 configuration.yaml.save
-
+.storage/
 
